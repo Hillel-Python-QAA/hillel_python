@@ -1,0 +1,68 @@
+2024-04-26 19:59:13.329 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 19:59:13.330 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 19:59:13.330 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 19:59:13.330 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 19:59:13.330 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru
+
+
+2024-04-26 20:00:59.836 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 20:00:59.837 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 20:00:59.837 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 20:00:59.837 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 20:00:59.838 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru
+2024-04-26 20:00:59.838 | ERROR    | __main__:<module>:21 - An error has been caught in function '<module>', process 'MainProcess' (45283), thread 'MainThread' (130958042532736):
+Traceback (most recent call last):
+
+> File "/home/jubo/python/hillel_python/lecture_10/loguru_demo.py", line 21, in <module>
+    function()
+    └ <function function at 0x771b09987ba0>
+
+TypeError: function() missing 3 required positional arguments: 'x', 'y', and 'z'
+2024-04-26 20:01:19.097 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 20:01:19.097 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 20:01:19.097 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 20:01:19.098 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 20:01:19.098 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru
+2024-04-26 20:01:54.244 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 20:01:54.244 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 20:01:54.244 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 20:01:54.244 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 20:01:54.244 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru
+2024-04-26 20:01:54.245 | ERROR    | __main__:<module>:21 - An error has been caught in function '<module>', process 'MainProcess' (45309), thread 'MainThread' (134591284886400):
+Traceback (most recent call last):
+
+> File "/home/jubo/python/hillel_python/lecture_10/loguru_demo.py", line 21, in <module>
+    function(2, 3, -5)
+    └ <function function at 0x7a68f7b87b00>
+
+  File "/home/jubo/python/hillel_python/lecture_10/loguru_demo.py", line 18, in function
+    return 1 / (x + y + z)
+                │   │   └ -5
+                │   └ 3
+                └ 2
+
+ZeroDivisionError: division by zero
+2024-04-26 20:05:33.989 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 20:05:33.990 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 20:05:33.990 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 20:05:33.990 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 20:05:33.990 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru
+2024-04-26 20:05:33.990 | ERROR    | __main__:<module>:21 - An error has been caught in function '<module>', process 'MainProcess' (45464), thread 'MainThread' (127119643978624):
+Traceback (most recent call last):
+
+> File "/home/jubo/python/hillel_python/lecture_10/loguru_demo.py", line 21, in <module>
+    function(2, 3, '3')
+    └ <function function at 0x739d5741bb00>
+
+  File "/home/jubo/python/hillel_python/lecture_10/loguru_demo.py", line 18, in function
+    return 1 / (x + y + z)
+                │   │   └ '3'
+                │   └ 3
+                └ 2
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-04-26 20:05:55.235 | INFO     | __main__:<module>:9 - This is INFO message from loguru
+2024-04-26 20:05:55.236 | DEBUG    | __main__:<module>:10 - This is DEBUG message from loguru
+2024-04-26 20:05:55.236 | WARNING  | __main__:<module>:11 - This is WARNING message from loguru
+2024-04-26 20:05:55.236 | ERROR    | __main__:<module>:12 - This is ERROR message from loguru
+2024-04-26 20:05:55.236 | CRITICAL | __main__:<module>:13 - This is CRITICAL message from loguru

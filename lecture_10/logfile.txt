@@ -1,0 +1,30 @@
+2024-04-26 19:20:45,569 - DEBUG - This is DEBUG message
+2024-04-26 19:20:45,569 - INFO - This is INFO message
+2024-04-26 19:20:45,569 - WARNING - This is WARNING message
+2024-04-26 19:20:45,569 - ERROR - This is ERROR message
+2024-04-26 19:20:45,569 - CRITICAL - This is CRITICAL message
+2024-04-26 19:26:33,374 - DEBUG - This is DEBUG message
+2024-04-26 19:26:33,374 - INFO - This is INFO message
+2024-04-26 19:26:33,374 - WARNING - This is WARNING message
+2024-04-26 19:26:33,374 - ERROR - This is ERROR message
+2024-04-26 19:26:33,374 - CRITICAL - This is CRITICAL message
+2024-04-26 19:29:53,708 - DEBUG - This is DEBUG message - logging_file_stdout.py
+2024-04-26 19:29:53,708 - INFO - This is INFO message - logging_file_stdout.py
+2024-04-26 19:29:53,708 - WARNING - This is WARNING message - logging_file_stdout.py
+2024-04-26 19:29:53,708 - ERROR - This is ERROR message - logging_file_stdout.py
+2024-04-26 19:29:53,708 - CRITICAL - This is CRITICAL message - logging_file_stdout.py
+2024-04-26 19:31:48,898 - DEBUG - This is DEBUG message - logging_file_stdout.py - <module> - 22 - __main__
+2024-04-26 19:31:48,898 - INFO - This is INFO message - logging_file_stdout.py - <module> - 23 - __main__
+2024-04-26 19:31:48,898 - WARNING - This is WARNING message - logging_file_stdout.py - <module> - 24 - __main__
+2024-04-26 19:31:48,898 - ERROR - This is ERROR message - logging_file_stdout.py - <module> - 25 - __main__
+2024-04-26 19:31:48,898 - CRITICAL - This is CRITICAL message - logging_file_stdout.py - <module> - 26 - __main__
+2024-04-26 19:32:59,332 - DEBUG - This is DEBUG message - logging_file_stdout.py - run_logger - 23 - __main__
+2024-04-26 19:32:59,332 - INFO - This is INFO message - logging_file_stdout.py - run_logger - 24 - __main__
+2024-04-26 19:32:59,332 - WARNING - This is WARNING message - logging_file_stdout.py - run_logger - 25 - __main__
+2024-04-26 19:32:59,332 - ERROR - This is ERROR message - logging_file_stdout.py - run_logger - 26 - __main__
+2024-04-26 19:32:59,332 - CRITICAL - This is CRITICAL message - logging_file_stdout.py - run_logger - 27 - __main__
+2024-04-26 19:34:19 - DEBUG - This is DEBUG message - logging_file_stdout.py - run_logger - 23 - __main__
+2024-04-26 19:34:19 - INFO - This is INFO message - logging_file_stdout.py - run_logger - 24 - __main__
+2024-04-26 19:34:19 - WARNING - This is WARNING message - logging_file_stdout.py - run_logger - 25 - __main__
+2024-04-26 19:34:19 - ERROR - This is ERROR message - logging_file_stdout.py - run_logger - 26 - __main__
+2024-04-26 19:34:19 - CRITICAL - This is CRITICAL message - logging_file_stdout.py - run_logger - 27 - __main__
