@@ -8,11 +8,6 @@ class Cat:
         return 'Meow!'
 
 
-animals = [Cat(), Dog()]
-for animal in animals:
-    print(animal.make_sound())
-
-
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -30,14 +25,23 @@ class Dogs(Animal):
 
 
 class Cats(Animal):
+    """
+    Class Cats for creating cats objects with custom name and method 'make_sound' that returns 'Meow!'
+    """
     def make_sound(self):
         return 'Meow!'
 
 
-animals = [Dogs('Buddy'), Cats('Whiskers'), Dog(), Cat()]
-
-for animal in animals:
-    if isinstance(animal, Animal):
-        print(f'{animal.name} says: {animal.make_sound()}')
-    else:
+if __name__ == '__main__':
+    animals = [Cat(), Dog()]
+    for animal in animals:
         print(animal.make_sound())
+
+    animals = [Dogs('Buddy'), Cats('Whiskers'), Dog(), Cat()]
+
+    for animal in animals:
+        if isinstance(animal, Animal):
+            print(f'{animal.name} says: {animal.make_sound()}')
+        else:
+            print(animal.make_sound())
+
