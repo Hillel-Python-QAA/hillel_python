@@ -1,2 +1,5 @@
 selenium==4.21.0
 requests==2.32.1
+SQLAlchemy==2.0.30
+pony==0.7.17
+psycopg2-binary==2.9.9
