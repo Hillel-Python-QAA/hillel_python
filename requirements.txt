@@ -4,3 +4,5 @@ SQLAlchemy==2.0.30
 pony==0.7.17
 psycopg2-binary==2.9.9
 pytest==8.2.2
+lxml==5.2.2
+beautifulsoup4==4.12.3
