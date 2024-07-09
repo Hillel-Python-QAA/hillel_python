@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    options {
+        buildDiscarder logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '500', daysToKeepStr: '30', numToKeepStr: '500')
+        timestamps()
+    }
+
+    stages {
+        stage('Clean Up Workspace') {
+            steps {
+                cleanWs(deleteDirs: true)
+            }
+        }
+        stage('Checkout Tests') {
+            steps {
+                echo 'Get Python Framework\n'
+                git branch: 'main', url: 'https://github.com/Hillel-Python-Automation/api_test_autoamtion_framework.git'
+            }
+        }
+        stage('SetUp & Run Tests') {
+            agent {
+                docker {
+                    alwaysPull true
+                    image "yurigrbond88/api_python:latest"
+                    reuseNode true
+                    args '-v /allure-results:/allure-results'
+                }
+            }
+            steps {
+            	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            	    echo 'Python & PIP versions\n'
+                	sh 'python --version'
+                	sh 'pip --version'
+                	sh 'pytest -rA --alluredir=allure-results'
+            	}
+            }
+        }
+        stage('Generate Allure Report') {
+            steps{
+                allure jdk: '', report: 'allure-report', results: [[path: 'api_tests/allure-results']]
+            }
+        }
+    }
+    // post {
+    //     cleanup {
+    //         cleanWs(deleteDirs: true)
+    //     }
+    // }
+}
