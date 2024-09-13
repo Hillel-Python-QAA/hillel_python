@@ -7,7 +7,7 @@ DATABASE_URL = "postgresql://postgres:postgres@localhost/my_db"
 
 
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     user_id = Column(Integer, primary_key=True)
     username = Column(String)
@@ -19,14 +19,14 @@ try:
     Session = sessionmaker(bind=engine)
     session = Session()
     # Відповідає INSERT INTO users (username, email) VALUES ('John', 'users@email');
-    new_user = User(username='John', email='users@email')
+    new_user = User(username="John", email="users@email")
     session.add(new_user)
     session.commit()
 
     # Відповідає UPDATE users SET email=jogn@email.com WHERE name='John';
-    user = session.query(User).filter_by(username='John').first()
+    user = session.query(User).filter_by(username="John").first()
     print(user.username)
-    user.email = 'john@email.com'
+    user.email = "john@email.com"
     session.commit()
 
     # Відповідає DELETE FROM users WHERE name='John';
@@ -38,7 +38,7 @@ try:
     # SQL аналог: SELECT * FROM users;
 
     # Фільтрація за умовою
-    john = session.query(User).filter_by(username='John').first()
+    john = session.query(User).filter_by(username="John").first()
     # SQL аналог: SELECT * FROM users WHERE username = 'John' LIMIT 1;
 
     # Сортування
@@ -46,5 +46,4 @@ try:
     # SQL аналог: SELECT * FROM users ORDER BY username DESC;
 
 except Exception as e:
-    print('Error', e)
-
+    print("Error", e)

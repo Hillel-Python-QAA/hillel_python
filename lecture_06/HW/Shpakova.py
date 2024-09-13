@@ -11,15 +11,15 @@ print("Unique symbols count: ", len(unique_symbols))
 
 # Цикл “Дочекайся літери”
 
-word = str(input("Please enter a word that contains \"h\" letter: "))
+word = str(input('Please enter a word that contains "h" letter: '))
 
 while word.lower().find("h") == -1:
-    word = str(input("Please enter word that contains \"h\" letter: "))
+    word = str(input('Please enter word that contains "h" letter: '))
 
 
 # Забери зі списку що потрібно
 
-lst1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
+lst1 = ["1", "2", 3, True, "False", 5, "6", 7, 8, "Python", 9, 0, "Lorem Ipsum"]
 lst_str = []
 lst_int = []
 lst_bool = []

@@ -54,7 +54,7 @@ def check_that_search_has_done(driver):
         logger.setLevel(logging.DEBUG)
         console_handler = logging.StreamHandler()
         console_handler.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
         console_handler.setFormatter(formatter)
         logger.addHandler(console_handler)
 
@@ -63,14 +63,14 @@ def check_that_search_has_done(driver):
         search_results = search_result_page.search_result()
         logger.debug(search_results)
 
-        actual_res = search_results.get_attribute('wholeText')
+        actual_res = search_results.get_attribute("wholeText")
         logger.debug(actual_res)
         # Use regex to find all digit sequences
-        digits = re.findall(r'\d+', actual_res)
+        digits = re.findall(r"\d+", actual_res)
         logger.debug(digits)
 
         # Join the found sequences into a single number
-        result = ''.join(digits)
+        result = "".join(digits)
         logger.debug(result)
 
         result = int(result)

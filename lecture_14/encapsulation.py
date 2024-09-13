@@ -14,7 +14,7 @@ class Car:
         self.__year = new_year
 
 
-my_car = Car('BMW', 'X7')
+my_car = Car("BMW", "X7")
 print(my_car.make)
 my_car.display_year()
 my_car.display_model()
@@ -23,7 +23,7 @@ my_car.display_year()
 
 
 class Toyota(Car):
-    def __init__(self, model, make='Toyota', engine_type='Petrol'):
+    def __init__(self, model, make="Toyota", engine_type="Petrol"):
         Car.__init__(self, make, model)
         self.engine_type = engine_type
 
@@ -31,19 +31,17 @@ class Toyota(Car):
         self._model = new_model
 
 
-toyota = Toyota('Toyota', 'Prius', 'Hybrid')
+toyota = Toyota("Toyota", "Prius", "Hybrid")
 
 toyota.display_year()
 toyota.update_year(2005)
 toyota.display_year()
 
-toyota2 = Toyota('Toyota', 'Camry')
+toyota2 = Toyota("Toyota", "Camry")
 print(toyota2.engine_type)
 toyota2.display_model()
 
-toyota3 = Toyota('Corolla')
+toyota3 = Toyota("Corolla")
 
 print(toyota3.engine_type)
 toyota3.display_model()
-
-

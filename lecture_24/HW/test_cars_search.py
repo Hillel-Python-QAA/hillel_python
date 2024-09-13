@@ -25,15 +25,21 @@ logger.addHandler(console_handler)
 
 @pytest.fixture(scope="class")
 def auth_headers() -> dict:
-    response = requests.post(f"{BASE_URL}/auth", auth=HTTPBasicAuth("test_user", "test_pass"))
+    response = requests.post(
+        f"{BASE_URL}/auth", auth=HTTPBasicAuth("test_user", "test_pass")
+    )
     yield {"Authorization": "Bearer {}".format(response.json()["access_token"])}
 
 
 @pytest.fixture(scope="session")
 def session() -> requests.Session:
     session = requests.Session()
-    response = session.post(f"{BASE_URL}/auth", auth=HTTPBasicAuth("test_user", "test_pass"))
-    session.headers.update({"Authorization": "Bearer {}".format(response.json()["access_token"])})
+    response = session.post(
+        f"{BASE_URL}/auth", auth=HTTPBasicAuth("test_user", "test_pass")
+    )
+    session.headers.update(
+        {"Authorization": "Bearer {}".format(response.json()["access_token"])}
+    )
     yield session
 
 
@@ -55,15 +61,14 @@ def test_get_cars_search_auth_headers(auth_headers):
         ("price", 26),
         (None, None),
         ("model", 2),
-        (0,0)
-    ]
+        (0, 0),
+    ],
 )
 def test_get_cars_search_session(session, sort_by, limit):
-    params = {
-        'sort_by': sort_by,
-        'limit': limit
-    }
-    logger.info(f"Testing API /Cars search with parameters: 'sort_by'='{sort_by}', 'limit'={limit}")
+    params = {"sort_by": sort_by, "limit": limit}
+    logger.info(
+        f"Testing API /Cars search with parameters: 'sort_by'='{sort_by}', 'limit'={limit}"
+    )
 
     response = session.get(f"{BASE_URL}/cars", params=params)
 
@@ -77,5 +82,3 @@ def test_get_cars_search_session(session, sort_by, limit):
         assert len(response.json()) == 25 + limit
     else:
         assert len(response.json()) <= limit
-
-

@@ -1,22 +1,22 @@
 def my_decorator(func):
     def wrapper():
-        print('Before function')
+        print("Before function")
         func()
-        print('After function')
+        print("After function")
 
     return wrapper
 
 
 @my_decorator
 def say_hello():
-    print('Hello!')
+    print("Hello!")
 
 
 say_hello()
 
 
 def say_hello2():
-    print('Hello!')
+    print("Hello!")
 
 
 decorated_funct = my_decorator(say_hello2)
@@ -65,16 +65,16 @@ from datetime import datetime
 
 def my_decorator3(func):
     def wrapper():
-        print('start of the decorator')
+        print("start of the decorator")
         func()
-        print('end of the decorator')
+        print("end of the decorator")
 
     return wrapper
 
 
 @my_decorator3
 def say_yuppi():
-    print('Yuppi!')
+    print("Yuppi!")
 
 
 # say_yuppi()
@@ -82,12 +82,13 @@ def say_yuppi():
 
 # say_yuppi = my_decorator(say_yuppi) # variant without decorator
 
+
 def not_during_the_night(func):
     def wrapper():
         if 7 >= datetime.now().hour >= 22:
             func()
         else:
-            print('Tsss!!!')
+            print("Tsss!!!")
 
     return wrapper
 
@@ -104,7 +105,7 @@ def do_twise(func):
 @not_during_the_night
 @do_twise
 def say_yuppi():
-    print('Yuppi!')
+    print("Yuppi!")
 
 
 say_yuppi()
@@ -134,4 +135,3 @@ my_cls.my_static_method()
 MyClass.my_static_method()
 my_cls.my_class_method()
 MyClass.my_class_method()
-

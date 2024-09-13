@@ -48,5 +48,5 @@ class TestSearch:
         # Перевірка результатів пошуку
         search = browser.find_elements(By.TAG_NAME, "td")
         print([res.text for res in search])
-        assert any(query in res.text for res in search), 'Query not found'
+        assert any(query in res.text for res in search), "Query not found"
         time.sleep(2)

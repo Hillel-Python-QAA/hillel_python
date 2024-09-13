@@ -68,17 +68,17 @@ print(global_var)
 def top_func():
     # global x
     x = None
-    print('top', x)
+    print("top", x)
 
     def nested_func():
         # global x
         nonlocal x
         print(x)
         x = 5
-        print('nested', x)
+        print("nested", x)
 
     nested_func()
-    print('top', x)
+    print("top", x)
 
 
 top_func()

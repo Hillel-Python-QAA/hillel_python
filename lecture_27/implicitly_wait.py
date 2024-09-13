@@ -19,7 +19,9 @@ def test_example_with_explicit_wait(browser):
     browser.get("https://www.example.com")
 
     # Чекаємо, поки заголовок сторінки з'явиться (не більше 10 секунд)
-    WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.TAG_NAME, "h1"))
+    )
 
     # Знаходимо елемент на сторінці після очікування
     heading = browser.find_element(By.TAG_NAME, "h1")

@@ -1,17 +1,14 @@
-_string = ("sdjfnskjdfnd"
-           "sdfsdfsdfsdfsdf"
-           "sdfsdfsdfsdfsdf"
-           "sdfsdfsdfsdfsdsdf")
+_string = "sdjfnskjdfnd" "sdfsdfsdfsdfsdf" "sdfsdfsdfsdfsdf" "sdfsdfsdfsdfsdsdf"
 print(_string)
 print()
-_string = 'sdjfnskjdfn'
+_string = "sdjfnskjdfn"
 print(_string)
 print()
-_string = '''sdjfnskjdfn
+_string = """sdjfnskjdfn
 dfsdfn,msdnf,m
 sdfsdfsdfsdf
 sdfsdfsdfsdfsdf
-'''
+"""
 print(_string)
 print()
 _string = """sdjfnskjdfn
@@ -84,4 +81,3 @@ print(_string.__len__())
 # @декоратор
 # def функція():
 #     # Блок коду
-

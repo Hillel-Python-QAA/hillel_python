@@ -2,22 +2,18 @@ import psycopg2
 
 
 # DB Parameters
-dbname = 'my_db'
-user = 'postgres'
-password = 'postgres'
-host = 'localhost'
-port = '5432'
+dbname = "my_db"
+user = "postgres"
+password = "postgres"
+host = "localhost"
+port = "5432"
 
 try:
     connection = psycopg2.connect(
-        dbname=dbname,
-        user=user,
-        password=password,
-        host=host,
-        port=port
+        dbname=dbname, user=user, password=password, host=host, port=port
     )
 
-    print('Connected to the db {} successfully!'.format(dbname))
+    print("Connected to the db {} successfully!".format(dbname))
 
     cursor = connection.cursor()
 
@@ -35,7 +31,7 @@ try:
     connection.commit()
 
 except (Exception, psycopg2.Error) as error:
-    print('Error while connecting to PostgreSQL', error)
+    print("Error while connecting to PostgreSQL", error)
 
 finally:
     if connection:

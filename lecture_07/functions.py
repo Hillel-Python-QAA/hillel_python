@@ -1,18 +1,18 @@
 ### Built-in functions in Python
 # abs(x) - Повертає абсолютне значення (модуль) числа x
 
-print('Модуль числа -10:', abs(-10))
+print("Модуль числа -10:", abs(-10))
 
 # all() - Повертає True, якщо всі елементи в ітерабельному об'єкті істинні (або якщо об'єкт порожній).
-print('all function with true outcome:', all([1, 2, 3]))  # True
-print('all function with false outcome:', all([1, 2, 0]))  # False because of 0
+print("all function with true outcome:", all([1, 2, 3]))  # True
+print("all function with false outcome:", all([1, 2, 0]))  # False because of 0
 
 # any() - Повертає True, якщо хоча б один елемент в ітерабельному об'єкті істинний.
 
 # bin() - Повертає рядок, який представляє бінарне представлення цілого числа `x`.
 
 # ascii() - Повертає читабельну версію об'єкта obj. Замінює символи, що не входять до ASCII, з їхніми escape-символами.
-print(ascii('Україна'))  # "'\\u0423\\u043a\\u0440\\u0430\\u0457\\u043d\\u0430'"
+print(ascii("Україна"))  # "'\\u0423\\u043a\\u0440\\u0430\\u0457\\u043d\\u0430'"
 
 
 # Створення функції
@@ -24,7 +24,7 @@ print(ascii('Україна'))  # "'\\u0423\\u043a\\u0440\\u0430\\u0457\\u043d\\
 
 def function_name():
     """Print 'Hello, World!'"""
-    print('Hello, World!')
+    print("Hello, World!")
 
 
 function_name()
@@ -42,13 +42,13 @@ def describe_pet(animal_type, pet_name):
     return f"My {animal_type}'s name is {pet_name.title()}"
 
 
-print(describe_pet('dog', 'oscar'))
-print(describe_pet(pet_name='Akhil', animal_type='dog'))
+print(describe_pet("dog", "oscar"))
+print(describe_pet(pet_name="Akhil", animal_type="dog"))
 
 # Function with default argument
 
 
-def greet(name, greeting='Hi'):
+def greet(name, greeting="Hi"):
     """
     Print greetings for given name
     :param name:
@@ -58,11 +58,12 @@ def greet(name, greeting='Hi'):
     print(f"{greeting}, {name}")
 
 
-greet('Yurii')
-greet(name='Mr.Bond', greeting='Good afternoon')
+greet("Yurii")
+greet(name="Mr.Bond", greeting="Good afternoon")
 
 
 # *args - list of arguments
+
 
 def print_args(*args):
     print(args)
@@ -70,12 +71,13 @@ def print_args(*args):
         print(arg)
 
 
-print_args(1, 'Hello', 3.14, [1, 2, 3])
+print_args(1, "Hello", 3.14, [1, 2, 3])
 print_args(1)
 # print(1_000_000.00)  1000000.0
 
 
 # **kwargs
+
 
 def print_kwargs(**my_kwa):
     print(my_kwa)
@@ -83,12 +85,13 @@ def print_kwargs(**my_kwa):
         print(f"{key}: {value}")
 
 
-print_kwargs(name='Yurii', age=35, city='Wroclaw')
+print_kwargs(name="Yurii", age=35, city="Wroclaw")
 
 
 # *args | **kwargs
 
-def print_args_and_kwargs(*args, x,  a=10, **kwargs):
+
+def print_args_and_kwargs(*args, x, a=10, **kwargs):
     print(args)
     for arg in args:
         print(arg)
@@ -101,7 +104,9 @@ def print_args_and_kwargs(*args, x,  a=10, **kwargs):
         print(f"{key}: {value}")
 
 
-print_args_and_kwargs(1, 'Hello', 3.14, [1, 2, 3], x=1, a=3, name='Yurii', age=35, city='Wroclaw')
+print_args_and_kwargs(
+    1, "Hello", 3.14, [1, 2, 3], x=1, a=3, name="Yurii", age=35, city="Wroclaw"
+)
 
 # Lambda function
 # lambda arguments: expression
@@ -109,14 +114,14 @@ print_args_and_kwargs(1, 'Hello', 3.14, [1, 2, 3], x=1, a=3, name='Yurii', age=3
 square = lambda x: x**2
 print(square(5))  # 25
 
-x_power_y = lambda x, y: x ** y
+x_power_y = lambda x, y: x**y
 print(x_power_y(2, 3))  # 8
 
 
 print(min(2, 3))
 lambda_min = lambda x, y: x if x < y else y
 
-print(lambda_min(2,3))
+print(lambda_min(2, 3))
 
 
 # map()
@@ -127,14 +132,14 @@ numbers_powers = list(map(pow, base_numbers, powers))
 
 print(numbers_powers)  # [2, 16, 216, 4096, 100000]
 
-lambda_powers = list(map(lambda x: x ** x, base_numbers))
+lambda_powers = list(map(lambda x: x**x, base_numbers))
 
 print(lambda_powers)
 
 
 # zip()
 list1 = (1, 2, 3)
-list2 = ('a', 'b', 'c', 'd')
+list2 = ("a", "b", "c", "d")
 list3 = (4, 5, 6, 6)
 
 zipped = zip(list2, list1, list3)
@@ -148,17 +153,17 @@ list4 = [1, 2, 3, 4, 5, 6, 7, 8]
 for i, value in enumerate(list4):
     print(f"value: {value} at index: {i}")
 
-list5 = ['banana', 'apple', 'plum']
+list5 = ["banana", "apple", "plum"]
 print(dict(enumerate(list5)))
 
 # eval(expression, globals=None, locals=None)
 
-exp_one = '3 + 5 * 2'
+exp_one = "3 + 5 * 2"
 print(eval(exp_one))  # 13
 
 x = 10
 y = 20
-print(eval('x + y'))  # 30
+print(eval("x + y"))  # 30
 
 
 # exec(object[, globals[, locals]])
@@ -180,12 +185,12 @@ def greetings(name):
 greetings('Yurii')
 """
 
-compiled_code = compile(code, '<string>', 'exec')
+compiled_code = compile(code, "<string>", "exec")
 # print(compiled_code)
 
 exec(compiled_code)
 
-compiled_exp = compile(exp_one, '<string>', 'eval')
+compiled_exp = compile(exp_one, "<string>", "eval")
 
 result = eval(compiled_exp)
 print(result)  # 13

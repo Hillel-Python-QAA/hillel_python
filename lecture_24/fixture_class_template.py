@@ -2,11 +2,10 @@ import pytest
 
 
 class TestClass:
-
     @pytest.fixture(scope="class")
     def my_fixture(self):
         data = {"key": "value"}
-        print('Use of the fixture')
+        print("Use of the fixture")
         yield data
 
     def test_1(self, my_fixture):

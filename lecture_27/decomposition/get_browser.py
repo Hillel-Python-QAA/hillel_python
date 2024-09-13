@@ -9,8 +9,7 @@ def firefox(debug=False):
     # (без відображення вікна браузера)
 
     # Вибираємо, чи потрібно запускати драйвер у режимі налагодження (debug mode)
-    driver = webdriver.Firefox() if debug else \
-        webdriver.Firefox(options=options)
+    driver = webdriver.Firefox() if debug else webdriver.Firefox(options=options)
     # Використання headless, якщо не включено налагодження
 
     # Максимізуємо вікно браузера (якщо відображення не вимкнено)

@@ -8,7 +8,7 @@ def check_even(numbers):
             yield num * num
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     m1 = memory_profiler.memory_usage()
     t1 = time.time()
 

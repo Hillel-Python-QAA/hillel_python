@@ -16,7 +16,9 @@ class TestAPI(unittest.TestCase):
         for item in api_data:
             # Проходимо через кожен елемент отриманих даних
             self.assertIn("id", item)  # Перевіряємо, що кожен елемент містить ключ "id"
-            self.assertIn("name", item)  # Перевіряємо, що кожен елемент містить ключ "name"
+            self.assertIn(
+                "name", item
+            )  # Перевіряємо, що кожен елемент містить ключ "name"
             # Додаткові перевірки можна додати тут
 
 

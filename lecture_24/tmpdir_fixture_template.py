@@ -29,4 +29,5 @@ def test_tmpdir_is_removed(tmpdir):
     # Перевірка, чи тимчасовий каталог існує перед видаленням
     assert os.path.exists(tmpdir)
 
+
 # Після виконання тесту tmpdir буде видалено автоматично

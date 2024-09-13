@@ -6,11 +6,7 @@ def f(name):
 
 
 def test_f(capfd):
-    f('Tom')
+    f("Tom")
 
     out, err = capfd.readouterr()
     assert out == "hello Tom\n"
-
-
-
-

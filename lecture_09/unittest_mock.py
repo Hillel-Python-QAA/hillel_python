@@ -15,22 +15,22 @@ class APIClient:
 
 
 class TestAPIClient(unittest.TestCase):
-    @patch('requests.get')
+    @patch("requests.get")
     def test_get_data_success(self, mock_get):
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {'data': 'example_data'}
+        mock_response.json.return_value = {"data": "example_data"}
 
         mock_get.return_value = mock_response
 
-        api_client = APIClient(base_url='https://api.example.com')
+        api_client = APIClient(base_url="https://api.example.com")
         result = api_client.get_data()
 
-        mock_get.assert_called_once_with('https://api.example.com/data')
+        mock_get.assert_called_once_with("https://api.example.com/data")
 
-        self.assertEqual({'data': 'example_data'}, result)
+        self.assertEqual({"data": "example_data"}, result)
 
-    @patch('requests.get')
+    @patch("requests.get")
     def test_get_data_failure(self, mock_get):
         # Створюємо макет відповіді API-ендпоінта для
         # симуляції невдачі (status_code != 200)
@@ -41,11 +41,11 @@ class TestAPIClient(unittest.TestCase):
         mock_get.return_value = mock_response
 
         # Тестуємо метод get_data() з класу APIClient при невдачі
-        api_client = APIClient(base_url='https://api.example.com')
+        api_client = APIClient(base_url="https://api.example.com")
         result = api_client.get_data()
 
         # Перевіряємо, чи метод get() був викликаний з очікуваним URL
-        mock_get.assert_called_once_with('https://api.example.com/data')
+        mock_get.assert_called_once_with("https://api.example.com/data")
 
         # Перевіряємо, що результат - None при невдачі
         self.assertIsNone(result)

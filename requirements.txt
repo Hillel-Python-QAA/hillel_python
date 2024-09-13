@@ -9,3 +9,4 @@ beautifulsoup4==4.12.3
 pytest-html==4.1.1
 pytest-html-reporter==0.2.9
 allure-pytest==2.13.5
+loguru~=0.7.2

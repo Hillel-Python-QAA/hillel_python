@@ -1,6 +1,6 @@
 class Animal:
     def birth(self):
-        print('This animal has births')
+        print("This animal has births")
 
     def speak(self):
         pass
@@ -12,15 +12,15 @@ class Dog(Animal):
         self.breed = breed
 
     def speak(self):
-        return 'Wow'
+        return "Wow"
 
 
 class Cat(Animal):
     def speak(self):
-        return 'Meow'
+        return "Meow"
 
 
-dog = Dog('Oscar', 'Beagle')
+dog = Dog("Oscar", "Beagle")
 cat = Cat()
 
 dog.birth()
@@ -42,10 +42,10 @@ class Dolphin(Mammal, Animal):
         self.name = name
 
     def speak(self):
-        return 'hello'
+        return "hello"
 
 
-dolphin = Dolphin(name='Flipper', breed='dolphin', paws=0)
+dolphin = Dolphin(name="Flipper", breed="dolphin", paws=0)
 
 print(dolphin)
 print(dolphin.name)

@@ -5,7 +5,6 @@
 """
 
 import logging
-import unittest
 
 
 def log_event(username: str, status: str):
@@ -25,13 +24,13 @@ def log_event(username: str, status: str):
 
     # Створення та налаштування логера
     logging.basicConfig(
-        filename='lecture_10/HW/login_system.log',
+        filename="lecture_10/HW/login_system.log",
         level=logging.INFO,
-        format='%(asctime)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-        )
+        format="%(asctime)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
 
-    logger = logging.getLogger('log_event')
+    logger = logging.getLogger("log_event")
 
     # # Логування події
     # if status == "success":
@@ -42,9 +41,9 @@ def log_event(username: str, status: str):
     #     logger.error(log_message)
 
     match status:
-        case 'success':
+        case "success":
             logger.info(log_message)
-        case 'expired':
+        case "expired":
             logger.warning(log_message)
         case _:
             logger.error(log_message)

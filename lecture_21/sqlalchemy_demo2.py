@@ -11,7 +11,7 @@ Base = declarative_base()
 
 # Визначення моделі даних (таблиці) за допомогою класу
 class User(Base):
-    __tablename__ = 'user'
+    __tablename__ = "user"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
@@ -26,11 +26,13 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Додавання користувачів до бази даних
-session.add_all([
-    User(name='John', age=30),
-    User(name='Alice', age=25),
-    User(name='Bob', age=35),
-])
+session.add_all(
+    [
+        User(name="John", age=30),
+        User(name="Alice", age=25),
+        User(name="Bob", age=35),
+    ]
+)
 session.commit()
 # SQL аналог:
 # INSERT INTO users (name, age) VALUES ('John', 30), ('Alice', 25), ('Bob', 35);

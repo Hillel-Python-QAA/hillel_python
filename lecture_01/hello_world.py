@@ -1,9 +1,9 @@
 import math
 
 print("Hello, world!")
-print('Hello there!')
+print("Hello there!")
 ""
-''
+""
 # Типи даних
 # Числові
 # Цілі (int)  - 1, 2, 3
@@ -30,20 +30,20 @@ square_root2 = 3.0
 square_root3 = 3.0
 
 _list = [square_root0, square_root1, square_root2, square_root3]
-_list1 = [0, 1.0, '2', 3]
+_list1 = [0, 1.0, "2", 3]
 
 
-print("2" + '3')
+print("2" + "3")
 print(2 + 3)
 print(2.0 + 3)
 
 print(type(3))
 print(type(3.0))
-print(type('3.0'))
+print(type("3.0"))
 print(type([3.0]))
 print(type({3.0}))
 print(type((3.0,)))
-print(type({'1':3.0}))
+print(type({"1": 3.0}))
 
 print(math.sqrt(4))
 
@@ -51,7 +51,7 @@ print(_list)
 print(_list1)
 
 print(_list1[2])
-_list_2 = [1,1,2, 3, 4, 5, 5, 6, 7]
+_list_2 = [1, 1, 2, 3, 4, 5, 5, 6, 7]
 print(set(_list_2))
 
 # Математичні операції
@@ -59,7 +59,7 @@ print(set(_list_2))
 # -
 # /
 # *
-print(2 ** 3) # Піднесення в степінь
+print(2**3)  # Піднесення в степінь
 print(math.pow(2, 3))
 print("Ділення")
 print(5 / 2)  # 2.5 - просте ділення
@@ -68,29 +68,29 @@ print(5 % 2)  # 1 - Залишок від ділення
 
 # Логічні дії
 # > - більше
-print(3>2)
+print(3 > 2)
 # < - менше
-print(2<3)
+print(2 < 3)
 # != - не дорівнює
-print(3!=4)
+print(3 != 4)
 # >= - більше або рівне
-print(3>=2)
-print(3>=3)
+print(3 >= 2)
+print(3 >= 3)
 # <= - менше або рівне
-print(2<=3)
-print(2<=2)
+print(2 <= 3)
+print(2 <= 2)
 # == - дорівнює
-print(2==2)
+print(2 == 2)
 
 
 # and - і
-print('and')
+print("and")
 print(2 < 3 and 3 < 4)
 # or - або
-print('or')
+print("or")
 print(2 < 3 or 3 < 4)
 # not - не (інверсія)
-print('not', not (2 < 3))
+print("not", not (2 < 3))
 
 print()
 
@@ -110,7 +110,5 @@ a1 = 0
 
 
 print(2 == 2.0)
-print(type(2) == type(2.0))
+print(type(2) is type(2.0))
 print(isinstance(2, int))
-
-

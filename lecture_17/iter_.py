@@ -1,4 +1,4 @@
-import memory_profiler # pip install memory_profiler
+import memory_profiler  # pip install memory_profiler
 import time
 
 
@@ -10,7 +10,7 @@ def check_even(numbers):
     return even
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     m1 = memory_profiler.memory_usage()
     t1 = time.time()
     n2 = check_even(range(100_000_000))

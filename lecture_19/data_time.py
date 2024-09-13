@@ -24,10 +24,10 @@ print(time.ctime())
 print(time.ctime(curr))
 
 # gmtime([secs])
-print('gmtime:', time.gmtime(1000))
+print("gmtime:", time.gmtime(1000))
 
 # localtime([])
-print('localtime:', time.localtime(1000))
+print("localtime:", time.localtime(1000))
 
 # perf_counter
 start = time.perf_counter_ns()
@@ -43,14 +43,14 @@ print(time.process_time() - process_start)
 # time.sleep(1)
 
 # strptime(str, format)
-print(time.strptime('Sep 20, 2022', '%b %d, %Y'))
+print(time.strptime("Sep 20, 2022", "%b %d, %Y"))
 
 # strftime
-print(time.strftime('%d/%m/%Y %H:%M:%S %Z', time.localtime()))
+print(time.strftime("%d/%m/%Y %H:%M:%S %Z", time.localtime()))
 
 
 now = time.time()
-print('time:', now)
+print("time:", now)
 
 my_datetime = datetime.fromtimestamp(now)
-print('datetime:', my_datetime)
+print("datetime:", my_datetime)

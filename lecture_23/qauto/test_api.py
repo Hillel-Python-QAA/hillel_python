@@ -6,7 +6,7 @@ def test_signin_positive():
     user_data = {
         "email": "yuri.gr.bond@gmail.com",
         "password": "E5YvjATAPb7@Uz4",
-        "remember": False
+        "remember": False,
     }
 
     response = API.auth.signin(s, user_data)

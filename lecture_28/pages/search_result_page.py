@@ -9,4 +9,3 @@ class SearchResultPage(BasePage):
 
     def search_result(self):
         return self.driver.find_element(By.XPATH, "//div[@id='result-stats']")
-

@@ -27,7 +27,4 @@ element = WebDriverWait(driver, 10).until(
 )
 
 # Чекаємо, доки заголовок сторінки містить певний текст
-element = WebDriverWait(driver, 10).until(
-    EC.title_contains("Expected Title")
-)
-
+element = WebDriverWait(driver, 10).until(EC.title_contains("Expected Title"))

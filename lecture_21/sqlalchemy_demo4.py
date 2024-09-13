@@ -11,7 +11,7 @@ Base = declarative_base()
 
 # Визначення моделі даних (таблиці) за допомогою класу
 class Product(Base):
-    __tablename__ = 'product'
+    __tablename__ = "product"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
@@ -30,14 +30,14 @@ try:
     session.begin()
 
     # Додавання нового продукту
-    new_product = Product(name='Laptop', price=1000)
+    new_product = Product(name="Laptop", price=1000)
     session.add(new_product)
 
     # Збільшення ціни для всіх продуктів на 10%
     session.query(Product).update({Product.price: Product.price * 1.1})
 
     # Збільшення ціни для конкретного продукту на 5%
-    product = session.query(Product).filter_by(name='Laptop').first()
+    product = session.query(Product).filter_by(name="Laptop").first()
     product.price *= 1.05
 
     # Підтвердження транзакції

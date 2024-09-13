@@ -2,7 +2,7 @@ import pytest
 
 
 # Визначення фікстури з допомогою декоратора @pytest.fixture
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def my_fixture():
     # Ця частина коду буде виконана перед кожним тестом,
     # який використовує цю фікстуру

@@ -1,5 +1,6 @@
 import pytest
 
+
 # Використання фікстур з conftest.py на рівні класу.
 @pytest.mark.usefixtures("prepare_database", "prepare_config")
 class TestClassWithMultipleFixtures:

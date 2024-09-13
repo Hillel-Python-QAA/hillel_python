@@ -7,7 +7,7 @@ class Animal(ABC):
         pass
 
     def breed(self):
-        return 'Animal'
+        return "Animal"
 
 
 class Dog(Animal):
@@ -15,10 +15,10 @@ class Dog(Animal):
         self.name = name
 
     def make_sound(self):
-        return 'Woof!'
+        return "Woof!"
 
     def breed(self):
-        return 'Beagle'
+        return "Beagle"
 
 
 class Cat(Animal):
@@ -26,15 +26,17 @@ class Cat(Animal):
         self.name = name
 
     def make_sound(self):
-        return 'Meow!'
+        return "Meow!"
 
 
 def introduce(animal):
-    print(f'My name is {animal.name} and I say {animal.make_sound()} and I\'m a(an) {animal.breed()}')
+    print(
+        f"My name is {animal.name} and I say {animal.make_sound()} and I'm a(an) {animal.breed()}"
+    )
 
 
-dog = Dog('Oscar')
-cat = Cat('Kitty')
+dog = Dog("Oscar")
+cat = Cat("Kitty")
 
 introduce(dog)
 introduce(cat)
@@ -45,10 +47,10 @@ class Bird(Animal):
         self.name = name
 
     def make_sound(self):
-        return 'Tweet!'
+        return "Tweet!"
 
 
-bird = Bird('Sparrow')
+bird = Bird("Sparrow")
 introduce(bird)
 
 

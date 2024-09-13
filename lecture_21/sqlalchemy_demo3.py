@@ -11,7 +11,7 @@ Base = declarative_base()
 
 # Визначення моделей даних (таблиць) за допомогою класів
 class Department(Base):
-    __tablename__ = 'departments'
+    __tablename__ = "departments"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
@@ -21,11 +21,11 @@ class Department(Base):
 
 
 class Employee(Base):
-    __tablename__ = 'employee'
+    __tablename__ = "employee"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    department_id = Column(Integer, ForeignKey('departments.id'))
+    department_id = Column(Integer, ForeignKey("departments.id"))
 
     # Встановлення відношення "багато до одного" з таблицею Department
     department = relationship("Department", back_populates="employees")
@@ -39,12 +39,12 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Додавання департаментів та співробітників до бази даних
-it_department = Department(name='IT')
-hr_department = Department(name='HR')
+it_department = Department(name="IT")
+hr_department = Department(name="HR")
 
-john = Employee(name='John', department=it_department)
-alice = Employee(name='Alice', department=hr_department)
-bob = Employee(name='Bob', department=it_department)
+john = Employee(name="John", department=it_department)
+alice = Employee(name="Alice", department=hr_department)
+bob = Employee(name="Bob", department=it_department)
 
 session.add_all([it_department, hr_department, john, alice, bob])
 session.commit()

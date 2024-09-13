@@ -11,9 +11,9 @@ driver.get("http://0.0.0.0:8080/demo.html")
 
 # Робота з веб-елементами і виконання дій на сторінц
 # ID
-user_field = driver.find_element(By.ID, 'username')
-pass_field = driver.find_element(By.ID, 'password')
-login_button = driver.find_element(By.ID, 'login_button')
+user_field = driver.find_element(By.ID, "username")
+pass_field = driver.find_element(By.ID, "password")
+login_button = driver.find_element(By.ID, "login_button")
 # # XPath
 # user_field = driver.find_element(By.XPATH, "//input[@id='username']")
 # pass_field = driver.find_element(By.XPATH, "//input[@id='password']")

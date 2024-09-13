@@ -6,7 +6,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
@@ -17,7 +17,13 @@ class User(Base):
 from pony.orm import Required, PrimaryKey, Database
 
 
-db = Database(provider='postgres', user='username', password='password', host='localhost', database='dbname')
+db = Database(
+    provider="postgres",
+    user="username",
+    password="password",
+    host="localhost",
+    database="dbname",
+)
 
 
 # Використовуємо той самий клас User для PonyORM
@@ -27,5 +33,5 @@ class UserPonyORM(db.Entity):
     age = Required(int)
 
 
-db.bind(provider='sqlite', filename=':memory:')
+db.bind(provider="sqlite", filename=":memory:")
 db.generate_mapping(create_tables=True)

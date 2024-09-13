@@ -5,7 +5,7 @@ app = Flask(__name__)
 # Зразок даних про користувачів
 users = {
     "1": {"name": "Alice", "email": "alice@example.com"},
-    "2": {"name": "Bob", "email": "bob@example.com"}
+    "2": {"name": "Bob", "email": "bob@example.com"},
 }
 
 
@@ -38,7 +38,7 @@ def delete_user(user_id):
         return jsonify({"error": "User not found"}), 404
 
 
-if __name__ == '__main__':
-    host = '127.0.0.1'
+if __name__ == "__main__":
+    host = "127.0.0.1"
     port = 7070
     app.run(host=host, port=port, debug=True)

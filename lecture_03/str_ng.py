@@ -3,13 +3,13 @@ _string = "Hello, world!"
 print(_string)
 
 # Indexes
-print(_string[0]) # H
-print(_string[1]) # e
-print(_string[2]) # l
+print(_string[0])  # H
+print(_string[1])  # e
+print(_string[2])  # l
 
-print(_string[-1]) # !
-print(_string[-2]) # d
-print(_string[-3]) # l
+print(_string[-1])  # !
+print(_string[-2])  # d
+print(_string[-3])  # l
 
 # length
 print(len(_string))
@@ -42,26 +42,26 @@ for char in _string:
     print(char)
 
 # SPLIT
-shopping_list = 'apple, banana, pineapple, eggs, milk'
+shopping_list = "apple, banana, pineapple, eggs, milk"
 print(shopping_list)
-items = shopping_list.split(', ')
+items = shopping_list.split(", ")
 print(items)
-new_items = ' and '.join(items)
+new_items = " and ".join(items)
 print(new_items)
-print(new_items.split(' and '))
+print(new_items.split(" and "))
 
 # startswith
-if _string.startswith('Hello'):
-    print('Greetings!')
+if _string.startswith("Hello"):
+    print("Greetings!")
 else:
-    print('No greetings!')
+    print("No greetings!")
 
 # endswith
 
-if _string.endswith('world!'):
-    print('world!')
+if _string.endswith("world!"):
+    print("world!")
 else:
-    print('etc!')
+    print("etc!")
 
 # перевірка на регістр
 print(_string.islower())
@@ -76,17 +76,17 @@ print(_string.swapcase())
 
 # find
 _string = "Це приклад для пошуку у рядку."
-index = _string.find('пошук')
+index = _string.find("пошук")
 print(index)
 
 # replace
 _string = "Це приклад для заміни у рядку."
 print(_string)
-new_string = _string.replace('заміни', 'підміни')
+new_string = _string.replace("заміни", "підміни")
 print(new_string)
 _string = "Це приклад для заміни у рядку, заміни лише перше входження."
 print(_string)
-new_string = _string.replace('заміни', 'підміни', 1)
+new_string = _string.replace("заміни", "підміни", 1)
 print(new_string)
 
 
@@ -102,11 +102,9 @@ print(_string.rstrip())
 
 #
 _string = "1,2,3,4,5"
-new_string = _string.replace(',', ':')
+new_string = _string.replace(",", ":")
 print(new_string)
-_list = [int(item) for item in _string.split(',')]
+_list = [int(item) for item in _string.split(",")]
 print(_list)
 print(_list[::-1])
 print(_string[::-1])
-
-

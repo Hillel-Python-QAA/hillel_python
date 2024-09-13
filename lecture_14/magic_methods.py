@@ -5,7 +5,7 @@ class Person:
         self.age = age
 
 
-person = Person('John', 25)
+person = Person("John", 25)
 print(person.name, person.age)
 print(person)
 
@@ -20,7 +20,7 @@ class Book:
         return f"Book: {self.title} by {self.author}"
 
 
-book = Book('The Great Gatsby', 'F. Scott Fitzgerald')
+book = Book("The Great Gatsby", "F. Scott Fitzgerald")
 print(book.title, book.author)
 print(book)
 
@@ -46,6 +46,7 @@ print(len(stack))
 
 # __add__
 
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -65,6 +66,7 @@ print(result1.x, result1.y)
 
 
 # __eq__
+
 
 class Circle:
     def __init__(self, radius):

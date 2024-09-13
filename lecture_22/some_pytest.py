@@ -53,7 +53,7 @@ def tc_verify7():
 
 
 @pytest.mark.smoke
-@pytest.mark.skipif(platform.system() != 'Windows', reason="Not a Windows")
+@pytest.mark.skipif(platform.system() != "Windows", reason="Not a Windows")
 def tc_verify8():
     sleep(4)
     assert True

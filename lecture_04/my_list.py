@@ -10,7 +10,7 @@ print(type(empty_list_2))
 
 # Операції зі списками
 
-_list = ['MON', 'TUE', 'WED', 'THU', 'FRI']
+_list = ["MON", "TUE", "WED", "THU", "FRI"]
 
 print(_list[0])  # MON
 print(_list[4])  # FRI
@@ -76,7 +76,7 @@ print(list5)  # [1, 3]
 # count() - same as tuple
 
 # Розпакування
-print('Розпакування')
+print("Розпакування")
 numbers = [1, 2, 3, 4, 5]
 first, *middle, last = numbers
 # *middle - зірочка вказує на те що елементів має бути більш ніж один
@@ -117,7 +117,7 @@ list_from_tuple = list(my_tuple)
 print(list_from_tuple)
 
 # list comprehension
-squares = [x ** 2 for x in range(10)]
+squares = [x**2 for x in range(10)]
 print(squares)
 
 even_numbers = [x for x in range(10) if x % 2 == 0]

@@ -2,7 +2,7 @@ import sys
 import lecture_14.polymorphism as pm
 
 
-cat = pm.Cats('Barsik')
+cat = pm.Cats("Barsik")
 
 print(cat.name, cat.make_sound())
 

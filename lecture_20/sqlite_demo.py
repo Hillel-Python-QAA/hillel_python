@@ -21,5 +21,5 @@ data = [
 cur.executemany("INSERT INTO movie VALUES(?, ?, ?)", data)
 con.commit()  # Remember to commit the transaction after executing INSERT.
 
-cur.execute("DELETE FROM movie WHERE title==\"Monty Python and the Holy Grail\"")
+cur.execute('DELETE FROM movie WHERE title=="Monty Python and the Holy Grail"')
 con.commit()

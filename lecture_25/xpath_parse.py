@@ -2,7 +2,7 @@ from lxml import html
 import requests
 
 # Завантаження HTML-сторінки
-url = 'https://rtia.co.uk/'
+url = "https://rtia.co.uk/"
 response = requests.get(url)
 html_content = response.content
 
@@ -10,11 +10,11 @@ html_content = response.content
 tree = html.fromstring(html_content)
 
 # Вилучення тексту з тегу <title> за допомогою XPath
-title = tree.xpath('//title/text()')[0]
+title = tree.xpath("//title/text()")[0]
 print("Заголовок сторінки:", title)
 
 # Вилучення тексту з усіх тегів <a> за допомогою XPath
-links = tree.xpath('//a/text()')
+links = tree.xpath("//a/text()")
 for link in links:
     print("Посилання:", link)
 

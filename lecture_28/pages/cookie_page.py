@@ -7,7 +7,6 @@ from lecture_28.pages.base_page import BasePage
 
 
 class CookiePage(BasePage):
-
     def __init__(self, driver):
         BasePage.__init__(self, driver)
 

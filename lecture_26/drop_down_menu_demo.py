@@ -22,7 +22,9 @@ menu_button = driver.find_element(By.TAG_NAME, "button")
 actions.move_to_element(menu_button).perform()
 
 # знайти всі посилання на продукти в меню "Products"
-product_links = driver.find_elements(By.CSS_SELECTOR, ".dropdown-submenu .dropdown-content .product-link")
+product_links = driver.find_elements(
+    By.CSS_SELECTOR, ".dropdown-submenu .dropdown-content .product-link"
+)
 
 # пройтися по кожному посиланню і натиснути його
 for link in product_links:

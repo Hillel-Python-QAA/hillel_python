@@ -22,8 +22,8 @@ actions = ActionChains(driver)
 zone = driver.find_element(By.ID, "container")
 
 # дозволена довжина/ширина зони для руху
-azw = zone.size['width'] - circle.size['width'] - 10
-azh = zone.size['height'] - circle.size['height'] - 10
+azw = zone.size["width"] - circle.size["width"] - 10
+azh = zone.size["height"] - circle.size["height"] - 10
 
 try:
     # центр зони

@@ -11,4 +11,6 @@ class SearchPage(BasePage):
         return self.driver.find_element(By.ID, "APjFqb")
 
     def search_button(self):
-        return self.driver.find_element(By.XPATH, "(//input[@class='gNO89b' and @name='btnK'])[2]")
+        return self.driver.find_element(
+            By.XPATH, "(//input[@class='gNO89b' and @name='btnK'])[2]"
+        )

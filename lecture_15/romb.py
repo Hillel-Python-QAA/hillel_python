@@ -24,16 +24,16 @@ class Bat(Mammal, Bird):
         Bird.__init__(self, name=name, wingspan=wingspan)
 
     def sound(self):
-        return 'Squeak'
+        return "Squeak"
 
 
-bat = Bat('Bat', 2, 30)
+bat = Bat("Bat", 2, 30)
 
-print('Name:', bat.name)
-print('Num Legs:', bat.num_legs)
-print('Wingspan:', bat.wingspan)
+print("Name:", bat.name)
+print("Num Legs:", bat.num_legs)
+print("Wingspan:", bat.wingspan)
 
-print('Sound:', bat.sound())
+print("Sound:", bat.sound())
 
 print(Bat.mro())
 

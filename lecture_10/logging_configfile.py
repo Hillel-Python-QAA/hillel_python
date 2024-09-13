@@ -2,11 +2,10 @@ import logging
 import logging.config
 
 
-logging.config.fileConfig('logging_config.ini')
+logging.config.fileConfig("logging_config.ini")
 
-logger = logging.getLogger('sampleLogger')
+logger = logging.getLogger("sampleLogger")
 
 
-logger.debug('This is DEBUG message')
-logger.info('This is INFO message')
-
+logger.debug("This is DEBUG message")
+logger.info("This is INFO message")
